@@ -33,7 +33,8 @@ bot.start(async (ctx) => {
         });
 
         // Send the payment instruction message directly
-        ctx.replyWithMarkdown(`Send 0.1 SOL to the address below in order to gain access to the paid group\n[${address}](tg://msg?text=${address})`, {
+        ctx.reply(`Send 0.1 SOL to the address below in order to gain access to the paid group\n\`${address}\``, {
+            parse_mode: 'Markdown',
             reply_markup: {
                 inline_keyboard: [
                     [{ text: "Check Payment ✅", callback_data: `check_payment_${address}` }]
@@ -58,7 +59,8 @@ bot.command('invite', async (ctx) => {
             privateKey: privateKey,
         });
 
-        ctx.replyWithMarkdown(`Send 0.1 SOL to the address below in order to gain access to the paid group\n[${address}](tg://msg?text=${address})`, {
+        ctx.reply(`Send 0.1 SOL to the address below in order to gain access to the paid group\n\`${address}\``, {
+            parse_mode: 'Markdown',
             reply_markup: {
                 inline_keyboard: [
                     [{ text: "Check Payment ✅", callback_data: `check_payment_${address}` }]

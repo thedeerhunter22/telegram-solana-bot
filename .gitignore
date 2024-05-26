@@ -6,3 +6,5 @@ node_modules/
 
 # Ignore exports directory
 exports/
+
+list-private-keys
